@@ -73,8 +73,8 @@
       await sleep(200);
       const isSelected =
         !document.body.contains(queryInput) ||
-        Array.from(document.querySelectorAll("button")).some((btn) =>
-          btn.textContent.trim().toLowerCase().includes("apply to all")
+        Array.from(document.querySelectorAll("button")).some((button) =>
+          button.textContent.trim().toLowerCase().includes("apply to all")
         );
 
       if (isSelected) {
@@ -85,11 +85,11 @@
   };
 
   const ensureUnivSelected = async () => {
-    const univInput = document.querySelector(
+    const universityInput = document.querySelector(
       'input[id^="uploader-institution"], input[placeholder*="Search university" i], input[placeholder*="trường" i]'
     );
-    if (!univInput) return;
-    await selectFirstSuggestion(univInput, "Đại học");
+    if (!universityInput) return;
+    await selectFirstSuggestion(universityInput, "Đại học");
   };
 
   const ensureCourseSelected = async () => {
@@ -102,13 +102,13 @@
 
   const applySharedCourse = async () => {
     for (let attempt = 0; attempt < 15; attempt++) {
-      const applyBtn = Array.from(document.querySelectorAll("button")).find((btn) => {
-        const text = btn.textContent.trim().toLowerCase();
-        return !btn.disabled && (text === "apply to all" || text.includes("áp dụng cho tất cả"));
+      const applyButton = Array.from(document.querySelectorAll("button")).find((button) => {
+        const text = button.textContent.trim().toLowerCase();
+        return !button.disabled && (text === "apply to all" || text.includes("áp dụng cho tất cả"));
       });
 
-      if (applyBtn) {
-        applyBtn.click();
+      if (applyButton) {
+        applyButton.click();
         await sleep(350);
         return;
       }
@@ -116,10 +116,9 @@
     }
   };
 
-  const resolveDocTitle = (docId) => {
-    const titleInput = document.getElementById(`title-${docId}`);
-    const existingVal = titleInput?.value?.trim();
-    if (existingVal) return existingVal;
+  const resolveDocTitle = (titleInput, docId) => {
+    const existingValue = titleInput?.value?.trim();
+    if (existingValue) return existingValue;
 
     const cardEl =
       document.querySelector(`[data-doc-id="${docId}"]`) ||
@@ -152,26 +151,26 @@
       throw new Error("Chưa tìm thấy trường danh mục tài liệu. Hãy chắc chắn các file đã tải xong và đang ở bước thông tin.");
     }
 
-    for (const catSelect of categorySelects) {
-      const docId = catSelect.id.replace("categoryId-", "");
-      setFirstValidOption(catSelect);
+    for (const categorySelect of categorySelects) {
+      const docId = categorySelect.id.replace("categoryId-", "");
+      setFirstValidOption(categorySelect);
       setFirstValidOption(document.getElementById(`academicYear-${docId}`));
     }
 
     await sleep(80);
 
     let filledDocCount = 0;
-    for (const catSelect of categorySelects) {
-      const docId = catSelect.id.replace("categoryId-", "");
+    for (const categorySelect of categorySelects) {
+      const docId = categorySelect.id.replace("categoryId-", "");
       const titleInput = document.getElementById(`title-${docId}`);
       const descInput = document.getElementById(`description-${docId}`);
-      const docTitle = resolveDocTitle(docId);
+      const docTitle = resolveDocTitle(titleInput, docId);
 
       if (titleInput && !titleInput.value?.trim()) {
         setNativeInputVal(titleInput, docTitle);
       }
       if (descInput) {
-        setNativeInputVal(descInput, titleInput?.value?.trim() || docTitle);
+        setNativeInputVal(descInput, docTitle);
       }
 
       filledDocCount++;
