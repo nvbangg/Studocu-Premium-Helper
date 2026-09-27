@@ -63,42 +63,32 @@ input {
   white-space: nowrap;
 }
 
-.github-link {
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.header-icon-btn {
   display: inline-flex;
-  width: 36px;
-  height: 36px;
-  flex: 0 0 36px;
   align-items: center;
   justify-content: center;
-  border: 1px solid #dfe3ec;
-  border-radius: 10px;
-  color: #4b556b;
-  background: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 3px 10px rgba(15, 23, 42, 0.06);
-  transition:
-    color 0.16s ease,
-    background-color 0.16s ease,
-    border-color 0.16s ease;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1.5px solid #cbd5e1;
+  background: white;
+  color: #24292f;
+  text-decoration: none;
+  transition: transform 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
 }
 
-.github-link:hover {
-  border-color: #c8cedb;
-  color: #171b26;
-  background: #eef0f5;
-}
-
-.github-link:focus-visible,
-.reset-btn:focus-visible,
-.action-btn:focus-visible,
-.slider:focus-visible {
-  outline: 3px solid rgba(99, 102, 241, 0.2);
-  outline-offset: 2px;
-}
-
-.github-link svg {
-  width: 19px;
-  height: 19px;
-  fill: currentColor;
+.header-icon-btn:hover {
+  transform: scale(1.06);
+  border-color: #94a3b8;
+  background: #f1f5f9;
+  color: #000;
 }
 
 .settings-card {
