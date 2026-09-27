@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Studocu Premium Helper",
+  "version": "1.0",
+  "description": "Tự động tạo tài liệu Word và hỗ trợ nạp file lên Studocu",
+  "author": "nvbangg (https://github.com/nvbangg)",
+  "permissions": ["storage"],
+  "action": {
+    "default_title": "Studocu Premium Helper",
+    "default_popup": "popup/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.studocu.vn/vn/document/upload*"
+      ],
+      "js": [
+        "shared/docx-generator.js",
+        "content/form-filler.js",
+        "content/uploader.js"
+      ]
+    }
+  ],
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  }
+}
