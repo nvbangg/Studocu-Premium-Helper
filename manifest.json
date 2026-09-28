@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "Studocu Premium Helper",
-  "version": "0.1",
-  "description": "Extension tự động tạo tài liệu hỗ trợ kích hoạt nhanh Studocu Premium",
+  "version": "1.0",
+  "description": "Extension hỗ trợ tự động tạo và nạp tài liệu kích hoạt nhanh Studocu Premium",
   "author": "nvbangg (https://github.com/nvbangg)",
   "homepage_url": "https://chromewebstore.google.com/detail/ipfgmempbeifjleodakdhbpnfokokijn",
 
