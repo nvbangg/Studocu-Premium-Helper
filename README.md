@@ -1,6 +1,7 @@
-# [Studocu Premium Helper](https://github.com/nvbangg/Studocu-Premium-Helper)
+# [Studocu Premium Helper](https://github.com/nvbangg/studocu-premium-helper)
 
-Extension hỗ trợ tự động tạo và nạp tài liệu kích hoạt nhanh Studocu Premium
+> [!NOTE]
+> Extension hỗ trợ tự động tạo và nạp tài liệu kích hoạt nhanh Studocu Premium
 
 ## ✨ Tính năng
 
@@ -23,7 +24,7 @@ Extension hỗ trợ tự động tạo và nạp tài liệu kích hoạt nhanh
 
 Maintained with ❤️ by **[@nvbangg](https://github.com/nvbangg)**
 
-<a href="https://github.com/nvbangg/Studocu-Premium-Helper"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&duration=1500&pause=1000&color=FF4F81&center=true&vCenter=true&width=490&lines=%E2%AD%90+Star+this+repo+if+you+find+it+useful!" alt="Typing SVG" /></a>
+<a href="https://github.com/nvbangg/studocu-premium-helper"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&duration=1500&pause=1000&color=FF4F81&center=true&vCenter=true&width=490&lines=%E2%AD%90+Star+this+repo+if+you+find+it+useful!" alt="Typing SVG" /></a>
 
 </i></div>
 
