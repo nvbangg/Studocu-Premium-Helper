@@ -3,7 +3,7 @@
 > [!NOTE]
 > Extension hỗ trợ tự động tạo và nạp tài liệu kích hoạt nhanh Studocu Premium
 
-## ✨ Tính năng
+## 🔥 Tính năng
 
 - **Tạo và nạp tài liệu tự động:** Tự động tạo các file DOCX hợp lệ và nạp trực tiếp vào trang upload của Studocu.
 - **Tự động điền form:** Tự nhận diện và hoàn thiện đầy đủ các trường thông tin (Trường học, Môn học, Danh mục, Năm học, Tiêu đề và Mô tả).
